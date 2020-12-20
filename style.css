@@ -1,406 +1,229 @@
-:root{
-  --iframe-font-size: 15px;
-  --iframe-font-family: 'Proza Libre';
-  --iframe-font-color : rgba(0, 0, 0, 0.904);
+:root {
+  --iframe-font-size-title: 14px;
+  --iframe-font-size-titi: 13px;
+  --iframe-font-size-rage: 18px;
+  --iframe-font-family: "Proza Libre";
+  --iframe-logo-family: "Oswald";
+  --iframe-blue-color: rgba(0, 0, 255, 0.74);
+  --iframe-gray-color: #606060;
+  --iframe-light-gray-color: rgba(0, 0, 0, 0.315);
+  --iframe-font-color: rgba(0, 0, 0, 0.925);
+  --iframe-red-color: rgba(255, 0, 0, 0.884);
+  --iframe-padding: 10px;
+  --iframe-margin: 3px;
 }
 
-
-
-body{
-  margin: 0px;
-  font-family: 'Proza Libre';
-  -ms-overflow-style: none;
-}
-
-.main_menu {          /*메인 메뉴*/
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
-  padding: 12px;
-}
-.main_menu a {
-  color: #0c0b0bd0;
-}
-
-.left {
-  display: flex;
-  padding-bottom: 0;
-  justify-content: space-between;
-  padding-left: 10px;
-}
-.text{
-  display: inline;
-  color: black;
-  letter-spacing : -0.5px;
-  font-size: 18px;
-  font-weight: 600;
-  font-family: 'Oswald';
-}
-
-.text1{
-  font-size: 11px;
-  display: inline;
-  vertical-align: top;
-  color: rgba(0, 0, 0, 0.438);
-  font-weight: 600;
-}
-
-.fab {
-  color: red;
-  font-size: 23px;
-  margin-left: 30px;
-}
-
-.right {
-  display: flex;
-  justify-content: space-between;
-  width: 14%;
-  padding-right: 30px;
-}
-
-.right a {
-  color: rgba(12, 11, 11, 0.815);
-}
-
-.fa-user-circle {
-  font-size: 30px;
-  color: rgba(0, 0, 255, 0.767);
-}
-
-.search {
-  border-radius: 3px;
-  border: solid 0.1px rgba(0, 0, 0, 0.158);
-  background-color: rgba(0, 0, 0, 0.041);
-  font-size: 14px;
-   height: 27px;
-}
-
-.search input{
-  border: solid 0.1px rgba(0, 0, 0, 0.158);
-  width: 550px;
-  height: 23px;
-}
-
-.fa-search {
-  color: rgba(0, 0, 0, 0.438);
-  padding-left: 23px;
-  padding-right: 23px;
-  text-align: center;
-}
-
-
-
-
-.sub_menu{            /*좌측 메뉴*/
-  margin;
-  width: 235px;
-  font-size: 14px;
+* {
+  padding: 0;
   margin: 0;
-  height: 600px ;
-  overflow-y: scroll;
+  box-sizing: border-box;
 }
 
-.sub_menu i {
-  font-size: 18px;
+body {
+  font-family: var(---iframe-font-family);
+  color: var(--iframe-font-color);
 }
 
-.sub_menu a {
-  text-decoration: none;
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+  font-size: var(--iframe-font-size-rage);
 }
 
-.sub_menu li {
-  margin: 0px;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.74);
+  color: white;
+  align-items: center;
+}
+
+li {
   list-style: none;
-  padding: 11px;
-  padding-left: 30px;
-  color: rgba(0, 0, 0, 0.911);
 }
 
-.sub_menu ul{
-  margin: 0;
-  padding: 0px;
-  border-bottom: solid rgba(0, 0, 0, 0.13) 1px;
+.logo {
+  font-size: var(--iframe-font-size-rage);
+  font-family: var(--iframe-logo-family);
 }
 
-.sub_menu i {
-  margin-right: 30px;
-  color: rgba(0, 0, 0, 0.685);
+header .logo i {
+  color: red;
 }
 
-
-.sub_menu li:hover {
-  background-color: rgba(107, 102, 102, 0.082); 
+header .icons i {
+  margin-right: var(--iframe-padding);
 }
 
-.list_3 .a:hover {
-  background-color:white;
-}
-.list_5 p{ 
-  font-size: 13px;
-}
-
-
-
-
-
-.grid{
-  display:grid;    
-  grid-template-columns: 0.2fr 1fr;
-}
-
-.content{         /*동영상 내용*/
-  padding: 15px;
-  margin: 0px;
-  background-color: rgba(249, 249, 249);
-  height: 580px ;
-  width: auto;
-  overflow-y: scroll;
-}
-
-.content a{
-  text-decoration: none;
-  color:var(--iframe-font-color);
-  font-weight: 600;
-}
-
-.content_cf_2 p{
-  margin: 0px;
-  font-style: oblique;
-}
-
-.content_cf_2 i{
-  margin-left : 10px;
-  margin-right : 10px;
-}
-
-.content_1, 
-.content_2,
-.content_3{
-  border-bottom: rgba(226,226, 226) solid 7px;
-  padding: 10px;
-}
-
-
-.content_1 div, 
-.content_2 div,
-.content_3 div{
-  font-size:var(--iframe-font-size);
-  font-family:var(--iframe-font-family);
-  color:var(--iframe-font-color);
-  letter-spacing : -1px;
-  text-align: center;	
-}
-
-
-.content_cf {
-  display:grid;                       
-  grid-template-columns: 1fr 1fr;
-  width: 1077;
-  height: 230px;
-}
-
-.content_cf div{
-  height: 210px;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 20px;
-}
-
-.content_cf_1 {
-  width:600px ;
-}
-
-.content_cf_2 div{
-  margin: 0px;
-  height: 50%;
-}
-
-.content_cf_2 p{
- text-align: center;
- font-size: 40px;
- padding-top: 50px;
- font-family: 'Russo One';
-}
-
-.content_cf_2_1{
+.movie {
+  position: sticky;
+  top: 0;
   text-align: center;
-  display:grid;            
-  grid-template-columns: 1fr 1fr; 
+  background-color: black;
 }
 
-.content_cf_2_1 div{
-height: 100px;
-margin-right: 10px;
+.movie video {
+  text-align: center;
+  border: solid black;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
 }
 
-.content_1{
-  margin-top: 30px;
-  display:grid;            
-  grid-template-columns: 1fr 1fr 1fr 1fr; 
+.info .data {
+  padding: var(--iframe-padding);
+  margin: var(--iframe-margin);
 }
 
-.content_1 div {
-  width: 254px;
-  height: 254px;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 40px;
+.info .data .hash {
+  display: flex;
+  color: var(--iframe-blue-color);
 }
 
-.content_2menu {
+.info .data .hash li {
+  margin-bottom: var(--iframe-margin);
+  margin-right: var(--iframe-margin);
+  font-size: small;
+}
+
+.info .data .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info .data .title span {
+  font-size: var(--iframe-font-size-rage);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-right: var(--iframe-margin);
+}
+
+.info .data .title .title_bt {
+  height: 100%;
+}
+
+.info .data .views span {
+  font-size: var(--iframe-font-size-titi);
+  color: var(--iframe-gray-color);
+}
+
+.info .actions {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--iframe-padding);
+  margin-top: 10px;
+}
+
+.info .actions i {
+  font-size: var(--iframe-font-size-rage);
+  color: var(--iframe-gray-color);
+}
+
+.info .actions li span {
   display: block;
-  width: 1053;
-  height: 24px;
-  margin: 24px;
-  margin-left: 8px;
-  font-size: 22px;
-  font-family: 'Oswald';
+  font-size: var(--iframe-font-size-titi);
+  padding: var(--iframe-margin);
 }
 
-.content_2 {
-  display:grid;                       
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 1077px;
-
+.info .actions li .actions_god i {
+  color: var(--iframe-blue-color);
 }
 
-.content_2 div{
-  width: 340px;
-  height: 254px;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 40px;
+.info .channer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--iframe-light-gray-color);
+  border-bottom: 1px solid var(--iframe-light-gray-color);
+  padding: var(--iframe-padding);
 }
 
-.content_3{
-  margin-top: 40px;
-  display:grid;                       
-  grid-template-columns: 1fr 1fr 1fr 1fr; 
+.info .channer .channer_data {
+  display: flex;
+  align-items: center;
 }
 
-.content_3 div {
-  width: 254px;
-  height: 254px;
-  margin-left: 8px;
-  margin-right: 8px;
-  margin-bottom: 40px;
+.info .channer .channer_data .channer_info {
+  display: flex;
+  flex-direction: column;
+}
+.info .channer .channer_data .channer_info .chenner_title {
+  font-size: var(--iframe-font-size-title);
+}
+.info .channer .channer_data .channer_info .chenner_titi {
+  font-size: var(--iframe-font-size-titi);
+  color: var(--iframe-gray-color);
 }
 
-iframe {
-  width: 254px;
-  height: 190px;
+.info .channer .channer_data img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: var(--iframe-margin);
 }
 
-.content_2 iframe, 
-.content_cf_1 iframe,
-.content_cf_2_1 iframe  {
+.info .channer .channer_bt {
+  color: var(--iframe-red-color);
+  font-size: var(--iframe-font-size-title);
+}
+
+.last {
+  padding: var(--iframe-padding);
+}
+
+.last .item {
+  display: flex;
+  margin-top: var(--iframe-padding);
+}
+
+.last .item_text {
+  display: flex;
+  flex-direction: column;
+}
+
+.last .item .item_text {
+  flex: 1 65%;
+  margin: var(--iframe-margin);
+}
+
+.last .item .item_img {
+  flex: 1 35%;
+  margin-top: var(--iframe-margin);
+}
+
+.last img {
   width: 100%;
   height: 100%;
 }
 
-
-
-
-@media screen and (max-width:1300px) { 
-  .content_cf_2_1 iframe  {
-    display: none;
-  }
-  .content_cf_2 p {
-    display: none;
-  }
-  .search input{
-    width: 200px;
-  }
-
-  .content{         /*동영상 내용*/
-    padding: 0px;
-    margin: 0px;
-    width: 100%; 
-  }
-.content_2 .content_2_3{
-  display: none;
-}
-  .content iframe {
-    width: 100%;
-    height: 200px;
-    margin: 0px;
-    padding: 0px;
-  }
-
-  .content_1,
-  .content_3 {
-    display:grid;    
-    grid-template-columns: 1fr 1fr;
-  }
-  .content iframe{
-   width: 380px;
-  }
- .content div{
-  width: 380px;
- }
+.last .item .item_title {
+  font-size: var(--iframe-font-size-title);
 }
 
-@media screen and (max-width:700px) { 
-  .sub_menu{
-    display: none;
-  }
-
-  .content{         /*동영상 내용*/
-    position : absolute;
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-  }
-
-  .content div {
-    margin: 0px;
-    padding: 0px;
-    padding-top: 20px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    display: block;
-    width: 100%;
+.last .item_content {
+  color: var(--iframe-gray-color);
+  font-size: var(--iframe-font-size-titi);
 }
 
-  .content_cf {
-   text-align: center;
-  }
-
-  .content iframe {
-    width: 90%;
-    height: 200px;
-    margin: 0px;
-    padding: 0px;
-  }
-
-  .content a{
-    font-size: 20px;
-  }
-
-
-  .search {
-  background-color: white;
-  border: white;
-  }
-
-  .search input{
-    display: none;
-  
-  }
-
-  .fa-search {
-    color: rgba(0, 0, 0, 0.753);
-    font-size: 17px;
-  }
-
-  .right {
-    display: none;
-  }
+.last .item .item_titi {
+  font-size: var(--iframe-font-size-titi);
+  color: var(--iframe-gray-color);
 }
 
+.info_last {
+  display: flex;
+  flex-direction: column;
+  margin: var(--iframe-margin);
+}
 
-
-
-
-
-
+@media screen and (min-width: 900px) {
+  .info_last {
+    flex-direction: row;
+    margin: var(--iframe-padding);
+  }
+}
