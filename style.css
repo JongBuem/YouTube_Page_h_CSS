@@ -5,7 +5,7 @@
   --iframe-font-family: "Proza Libre";
   --iframe-logo-family: "Oswald";
   --iframe-blue-color: rgba(0, 0, 255, 0.74);
-  --iframe-gray-color: #606060;
+  --iframe-gray-color: rgba(0, 0, 0, 0.527);
   --iframe-light-gray-color: rgba(0, 0, 0, 0.315);
   --iframe-font-color: rgba(0, 0, 0, 0.925);
   --iframe-red-color: rgba(255, 0, 0, 0.884);
@@ -99,7 +99,7 @@ header .icons i {
   font-size: var(--iframe-font-size-rage);
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   overflow: hidden;
   margin-right: var(--iframe-margin);
 }
@@ -129,10 +129,6 @@ header .icons i {
   display: block;
   font-size: var(--iframe-font-size-titi);
   padding: var(--iframe-margin);
-}
-
-.info .actions li .actions_god i {
-  color: var(--iframe-blue-color);
 }
 
 .info .channer {
@@ -219,6 +215,29 @@ header .icons i {
   display: flex;
   flex-direction: column;
   margin: var(--iframe-margin);
+}
+
+.info .data .title span.activee {
+  -webkit-line-clamp: 1;
+}
+
+.info .data .title span.active {
+  -webkit-line-clamp: 3;
+}
+
+.info .actions .fa-thumbs-up.bule {
+  color: var(--iframe-blue-color);
+}
+.info .actions .fa-thumbs-up.gray {
+  color: var(--iframe-gray-color);
+}
+
+.info .actions .fa-thumbs-down.bulee {
+  color: var(--iframe-blue-color);
+}
+
+.info .actions .fa-thumbs-down.grayy {
+  color: var(--iframe-gray-color);
 }
 
 @media screen and (min-width: 900px) {

@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/9b79e876aa.js" crossorigin="anonymous"></script>
+        <script src="main.js" defer></script>
     </head>
     <body>
         <header>                   <!--상단 메뉴-->
@@ -36,10 +37,11 @@
                             <li> #서주원</li>
                         </ul>
                         <div class="title">
-                            <span>승휴와 창모가 술먹고 화제의 인물! 저기 누어있는 사람은 누구? 
-                                [올해 주원상, 월드베스트 인간 제조기]
+                            <span>승모씨와 임모씨가 술먹고?? 화제의 인물! 저기 누어있는 사람은 누구?!!
+                                [올해 주모상, 8전트 월드베스트 인간 제조기]
                             </span>
-                            <button class="title_bt">
+                            <button type="button" class="title_bt" value="a" onclick="
+                             button.set_button(this)">
                                 <i class="fas fa-caret-down"></i>
                             </button>
                         </div>
@@ -48,8 +50,8 @@
                         </div>
                 </div>
                     <ul class="actions">
-                            <li><button class="actions_god"><i class="fas fa-thumbs-up "><span>836</span></i></button></li>
-                            <li><button><i class="fas fa-thumbs-down"><span>219</span></i></button></li>
+                            <li><button><i class="fas fa-thumbs-up"><span class="bt_up"  value=836 >836</span></i></button></li>
+                            <li><button><i class="fas fa-thumbs-down"><span class="bt_dowm"  value=219 >219</span></i></button></li>
                             <li><button><i class="fas fa-share"><span>공유</span></i></button></li>
                             <li><button><i class="fas fa-plus"><span>저장</span></i></button></li>
                             <li><button><i class="fab fa-font-awesome-flag"><span>신고</span></i></button></li>
