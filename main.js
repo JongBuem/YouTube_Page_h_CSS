@@ -22,28 +22,69 @@ const button = {
     }
 }
 
+const icons_input = document.querySelector('.icons_input');
+const icons_bt =document.querySelector('.icons_bt1');
+
+function input() {
+    icons_input.style.display='inline';
+      }
+      icons_bt.addEventListener("click",input);
+
+
 const actions_down = document.querySelector('.fa-thumbs-down');
 const actions_up = document.querySelector('.fa-thumbs-up');
 const button_up = document.querySelector('.bt_up');
 const button_down = document.querySelector('.bt_down');
-let value;
+let count=1;
+let count_not =1;
 
-function func1(value) {
-  value = value+1;
-  return value;
-  console.log(value);
-  }
+function func1() {
+    if (count == 1){
+    actions_up.textContent=count;
+    actions_up.style.fontSize = 11+ 'pt';
+    count = --count;
+    }else{
+        actions_up.textContent=count;
+        actions_up.style.fontSize = 11+ 'pt';
+        count = ++count;
+    }
+}
 
-actions_up.addEventListener("click", ()=>{
-    actions_up.classList.toggle('bule');   
-    func1(value);
-});
+  function func2() {
+     if (count_not == 1){
+    actions_down.textContent=count_not;
+    actions_down.style.fontSize = 11+ 'pt';
+    count_not = --count_not;
+    }else{
+        actions_down.textContent=count_not;
+        actions_down.style.fontSize = 11+ 'pt';
+        count_not = ++count_not;
+    }
+}
+
+    function up() {
+    actions_up.classList.toggle('bule');
+      }
+    function down() {
+    actions_down.classList.toggle('bulee');
+     }
+     function down_up(){
+        actions_up.removeEventListener("click",up);   
+     }
+actions_up.addEventListener("click",up);
+actions_up.addEventListener("click",func1);
+actions_down.addEventListener("click",down);
+actions_down.addEventListener("click",func2);
+
+  
 
 
+/*
 actions_down.addEventListener("click", ()=>{
     actions_down.classList.toggle('bulee');  
-
+    func2();
 });
+*/
 
-console.log(value);
+
 

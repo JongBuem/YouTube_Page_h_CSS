@@ -18,6 +18,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+a {
+  color: red;
+  text-decoration: none;
+}
 
 body {
   font-family: var(---iframe-font-family);
@@ -57,6 +61,22 @@ header .logo i {
 
 header .icons i {
   margin-right: var(--iframe-padding);
+}
+
+header .icons_input {
+  display: none;
+  width: 300px;
+  height: 20px;
+}
+
+header .icons .icons_bt1 {
+  color: white;
+  background-color: #07070700;
+}
+
+header .icons .icons_bt2 {
+  color: white;
+  background-color: #07070700;
 }
 
 .movie {
@@ -121,12 +141,15 @@ header .icons i {
 }
 
 .info .actions i {
+  display: flex;
+  flex-direction: column;
   font-size: var(--iframe-font-size-rage);
   color: var(--iframe-gray-color);
 }
 
 .info .actions li span {
-  display: block;
+  display: flex;
+  flex-direction: column;
   font-size: var(--iframe-font-size-titi);
   padding: var(--iframe-margin);
 }
