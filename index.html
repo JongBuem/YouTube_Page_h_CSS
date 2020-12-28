@@ -12,9 +12,20 @@
         <script src="main.js" defer></script>
     </head>
     <body>
-        <header>                   <!--상단 메뉴-->
+        <header class="serch_header">                   <!--상단 메뉴-->   
+            <button class="serch_bt1 serch_bt"> 
+                <i class="fas fa-arrow-left"></i>
+            </button>       
+            <input type="text" class="serch_input" placeholder="YouTube검색">
+            <button class="serch_bt2 serch_bt">
+                <i class="fas fa-search fafa"></i>
+            </button>
+        </header>
+
+        <div class="header_movie">
+        <header class="head">                   <!--상단 메뉴-->
             <div class="logo">
-                <a href="https://jongbuem.github.io/YouTube_Page_CSS/">
+                <a class="logo_a" href="https://jongbuem.github.io/YouTube_Page_CSS/">
                     <i class="fab fa-youtube"></i>
                     <span class="title">YouTube</span>
                 </a>
@@ -34,7 +45,7 @@
         <section class="movie">  <!--비디오-->
             <video controls src="video/IMG_0788.MOV"></video>
         </section>
-
+        </div>
         <div class="info_last">
             <section class="info">   <!--가운데 메뉴-->
                 <div class="data">

@@ -6,6 +6,7 @@
   --iframe-logo-family: "Oswald";
   --iframe-blue-color: rgba(0, 0, 255, 0.74);
   --iframe-gray-color: rgba(0, 0, 0, 0.527);
+  --iframe-dark-gray-color: rgba(0, 0, 0, 0.644);
   --iframe-light-gray-color: rgba(0, 0, 0, 0.315);
   --iframe-font-color: rgba(0, 0, 0, 0.925);
   --iframe-red-color: rgba(255, 0, 0, 0.884);
@@ -18,14 +19,14 @@
   margin: 0;
   box-sizing: border-box;
 }
-a {
-  color: red;
-  text-decoration: none;
-}
 
 body {
   font-family: var(---iframe-font-family);
   color: var(--iframe-font-color);
+}
+
+li {
+  list-style: none;
 }
 
 button,
@@ -46,13 +47,14 @@ header {
   align-items: center;
 }
 
-li {
-  list-style: none;
-}
-
-.logo {
+header .logo {
   font-size: var(--iframe-font-size-rage);
   font-family: var(--iframe-logo-family);
+}
+
+header .logo a {
+  color: white;
+  text-decoration: none;
 }
 
 header .logo i {
@@ -65,7 +67,7 @@ header .icons i {
 
 header .icons_input {
   display: none;
-  width: 100px;
+  width: 350px;
   height: 20px;
 }
 
@@ -79,9 +81,12 @@ header .icons .icons_bt2 {
   background-color: #07070700;
 }
 
-.movie {
+.header_movie {
   position: sticky;
   top: 0;
+}
+
+.movie {
   text-align: center;
   background-color: black;
 }
@@ -263,9 +268,49 @@ header .icons .icons_bt2 {
   color: var(--iframe-gray-color);
 }
 
+header .icons_input.inputBt {
+  display: inline;
+  border-bottom: black solid 5px;
+  align-items: center;
+}
+
 @media screen and (min-width: 900px) {
   .info_last {
     flex-direction: row;
     margin: var(--iframe-padding);
   }
+}
+
+@media screen and (max-width: 500px) {
+  header .icons_input {
+    display: none;
+    width: 150px;
+    height: 20px;
+  }
+}
+
+.serch_header {
+  display: none;
+  padding: 16px;
+  padding-top: 10px;
+  background-color: rgb(255, 255, 255);
+  align-items: baseline;
+}
+
+.fa-arrow-left,
+.fafa {
+  color: var(--iframe-dark-gray-color);
+}
+
+.serch_bt {
+  margin: var(--iframe-margin);
+}
+
+.serch_input {
+  width: 80%;
+  height: 20px;
+  margin-top: var(--iframe-padding);
+  padding-bottom: var(--iframe-margin);
+  border: none;
+  border-bottom: 1px solid var(--iframe-dark-gray-color);
 }
