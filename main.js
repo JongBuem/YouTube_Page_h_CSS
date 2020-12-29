@@ -1,106 +1,119 @@
 'use strict';
-
-// 제목 화살표 버튼
-const butt = document.querySelector('.title_bt');
+//제목 화살표 버튼
+const buttonAtiv = document.querySelector('.title_bt');
 const button_move = document.querySelector('.title span');
 
-butt.addEventListener("click", ()=>{
-    button_move.classList.toggle('activee');
-    button_move.classList.toggle('active');
+buttonAtiv.addEventListener("click", ()=>{
+    button_move.classList.toggle('buttonText');
+    buttonAtiv.classList.toggle('buttonColor');
 });
 
-const button = {
-    set_button : function () {
-            const but = document.querySelector('.title_bt');
-        if(but.value==="a") {
-            but.style.color='red';
-            but.value="b";  
-        }
-        else {
-            but.style.color='black';
-            but.value="a";
-        }
-    }
-}
 
-// 검색창 버튼
-const icons_input = document.querySelector('.icons_input');
-const icons_bt =document.querySelector('.icons_bt1');
-const header = document.querySelector('.head');
-const serch_header = document.querySelector('.serch_header');
-const serch_bt1 =document.querySelector('.serch_bt1');
-const serch_input = document.querySelector('.serch_input');
+//입력창 이벤트
+const mainHeader = document.querySelector('.main_header');
+const serchHeader = document.querySelector('.serch_header');
+const iconsBtton = document.querySelector('.icons_bt1');
+const serchBtton = document.querySelector('.serch_bt1');
 
 function input() {
-serch_header.style.display='flex';
-  header.style.display='none';
+    serchHeader.style.display='flex';
+    mainHeader.style.display='none';
 }
 function serchInput(){
-    header.style.display='flex';
-    serch_header.style.display='none';
+    mainHeader.style.display='flex';
+    serchHeader.style.display='none';
 }
-serch_bt1.addEventListener("click", serchInput)
-icons_bt.addEventListener("click",input);
+serchBtton.addEventListener("click", serchInput)
+iconsBtton.addEventListener("click",input);
+
 
 // 좋아요와 싫어요 버튼
-const actions_down = document.querySelector('.fa-thumbs-down');
-const actions_up = document.querySelector('.fa-thumbs-up');
-const button_up = document.querySelector('.bt_up');
-const button_down = document.querySelector('.bt_down');
-let count=1;
-let count_not =1;
+const downImg = document.querySelector('.fa-thumbs-down');
+const upImg = document.querySelector('.fa-thumbs-up');
+let count=0;
+let countTwo =0;
 
-function upDown(count,count_not){
-    if(count == 1){
-        console.log(333);
-    }
-    else if(count_not==0){
-        console.log(555);
+const color = {
+    blue : 'rgba(0, 0, 255, 0.74)',
+    gray : 'rgba(0, 0, 0, 0.527)'
+}
+
+function bttonOption(vule, number, color) {
+    vule.textContent = number;
+    vule.style.fontSize = 11+ 'pt';
+    vule.style.color=color;
+}
+
+
+function goodUpDown(){
+    if(count==1&&countTwo==1){
+        countTwo = --countTwo;
+        bttonOption(downImg, countTwo, color.gray);
     }
 }
 
-function func1() {
-    if (count == 1){
-        actions_up.textContent=count;
-        actions_up.style.fontSize = 11+ 'pt';
+function badUpDown(){
+    if(count==1&&countTwo==1){
         count = --count;
-    }else{
-        actions_up.textContent=count;
-        actions_up.style.fontSize = 11+ 'pt';
+        bttonOption(upImg, count, color.gray);
+    }
+}
+
+
+function goodBtton() {
+    if (count === 0){
         count = ++count;
-    }
-    upDown(count,count_not);
-}
-function func2() {
-    if (count_not == 1){
-        actions_down.textContent=count_not;
-        actions_down.style.fontSize = 11+ 'pt';
-        count_not = --count_not;
+        bttonOption(upImg, count, color.blue);
     }else{
-        actions_down.textContent=count_not;
-        actions_down.style.fontSize = 11+ 'pt';
-        count_not = ++count_not;
+        count = --count;
+        bttonOption(upImg, count, color.gray);
     }
-    upDown(count,count_not);
 }
 
-function up() {
-    actions_up.classList.toggle('bule');
+
+function badBtton() {
+    if (countTwo === 0){
+        countTwo = ++countTwo;
+        bttonOption(downImg,countTwo, color.blue);
+    }else{
+        countTwo = --countTwo;
+        bttonOption(downImg,countTwo, color.gray);
+    }
 }
 
-function down() {
-    actions_down.classList.toggle('bulee');
+upImg.addEventListener("click", ()=>{
+    goodBtton();
+    goodUpDown();
+});
+downImg.addEventListener("click", ()=>{
+    badBtton();
+    badUpDown();
+});
+
+
+// 구독 버튼 
+const channerButton = document.querySelector('.channer_bt');
+let yes = true;
+
+function channerText() {
+    if (yes === true){
+        channerButton.textContent="구독중";
+        channerButton.style.color=color.gray;
+        yes = false;
+    } else {
+        channerButton.textContent="구독";
+        yes = true;
+        myFunction()
+    }
 }
 
-function down_up(){
-    actions_up.removeEventListener("click",up);   
+function myFunction() {
+    if (confirm("구독을 취소 하시겠습니까?")) {
+        channerButton.style.color='red';
+    } else {
+        channerButton.textContent="구독중";
+    }
 }
 
-actions_up.addEventListener("click",up);
-actions_up.addEventListener("click",func1);
-actions_down.addEventListener("click",down);
-actions_down.addEventListener("click",func2);
-
-
-
+channerButton.addEventListener("click", channerText);
 

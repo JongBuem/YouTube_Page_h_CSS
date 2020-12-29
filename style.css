@@ -245,35 +245,6 @@ header .icons .icons_bt2 {
   margin: var(--iframe-margin);
 }
 
-.info .data .title span.activee {
-  -webkit-line-clamp: 1;
-}
-
-.info .data .title span.active {
-  -webkit-line-clamp: 3;
-}
-
-.info .actions .fa-thumbs-up.bule {
-  color: var(--iframe-blue-color);
-}
-.info .actions .fa-thumbs-up.gray {
-  color: var(--iframe-gray-color);
-}
-
-.info .actions .fa-thumbs-down.bulee {
-  color: var(--iframe-blue-color);
-}
-
-.info .actions .fa-thumbs-down.grayy {
-  color: var(--iframe-gray-color);
-}
-
-header .icons_input.inputBt {
-  display: inline;
-  border-bottom: black solid 5px;
-  align-items: center;
-}
-
 @media screen and (min-width: 900px) {
   .info_last {
     flex-direction: row;
@@ -289,6 +260,16 @@ header .icons_input.inputBt {
   }
 }
 
+/*제목 화살표 버튼*/
+.info .data .title span.buttonText {
+  -webkit-line-clamp: 3;
+}
+
+.info .data .title .title_bt.buttonColor {
+  color: red;
+}
+
+/*입력창 이벤트*/
 .serch_header {
   display: none;
   padding: 16px;
