@@ -118,6 +118,7 @@ header .icons .icons_bt2 {
 .info .data .title {
   display: flex;
   justify-content: space-between;
+  cursor: pointer;s
 }
 
 .info .data .title span {
@@ -170,6 +171,7 @@ header .icons .icons_bt2 {
 .info .channer .channer_data {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .info .channer .channer_data .channer_info {
@@ -198,6 +200,29 @@ header .icons .icons_bt2 {
 
 .last {
   padding: var(--iframe-padding);
+}
+
+.last .last_title{
+  display: flex;
+  justify-content : space-between;
+}
+
+.last .last_btn{
+  border-top-left-radius : 15px;
+  border-top-right-radius : 15px;
+  border-bottom-right-radius : 15px;
+  border-bottom-left-radius : 15px;
+  background-color: var(--iframe-light-gray-color);
+  width: 40px;
+  text-align : left; 
+}
+
+.last .last_btn .last_btnsub{
+  display: inline;
+  border-radius: 50%;
+  background-color:var(--iframe-gray-color);
+  color: rgba(24, 23, 22, 0.068) ;
+  width: 100%;
 }
 
 .last .item {
@@ -261,11 +286,11 @@ header .icons .icons_bt2 {
 }
 
 /*제목 화살표 버튼*/
-.info .data .title span.buttonText {
+.info .data .title_span.buttonText {
   -webkit-line-clamp: 3;
 }
 
-.info .data .title .title_bt.buttonColor {
+.buttonColor {
   color: red;
 }
 
@@ -295,3 +320,39 @@ header .icons .icons_bt2 {
   border: none;
   border-bottom: 1px solid var(--iframe-dark-gray-color);
 }
+
+/*자동재생 버튼*/
+.last .last_btn.rightMove{
+  text-align : right; 
+}
+
+
+.wrapper{
+  position: absolute;
+  width: 50vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.wrapper.wrapperMenu{
+  display: block;
+}
+
+.wrapper div {
+  padding: 15px 20px;
+  background-color: #ffffff;
+}
+
+.wrapper button {
+  font-size: var(--iframe-font-size-title);
+}
+
+
+
+
+
+
+
+
+

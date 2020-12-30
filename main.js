@@ -1,13 +1,15 @@
 'use strict';
 //제목 화살표 버튼
-const buttonAtiv = document.querySelector('.title_bt');
-const button_move = document.querySelector('.title span');
+const tileButton = document.querySelector('.title_bt');
+const titleSpan = document.querySelector('.title_span');
 
-buttonAtiv.addEventListener("click", ()=>{
-    button_move.classList.toggle('buttonText');
-    buttonAtiv.classList.toggle('buttonColor');
-});
+function titleOption(){
+    titleSpan.classList.toggle('buttonText');
+    tileButton.classList.toggle('buttonColor');
+}
 
+tileButton.addEventListener("click", titleOption);
+titleSpan.addEventListener("click", titleOption);
 
 //입력창 이벤트
 const mainHeader = document.querySelector('.main_header');
@@ -20,8 +22,8 @@ function input() {
     mainHeader.style.display='none';
 }
 function serchInput(){
-    mainHeader.style.display='flex';
     serchHeader.style.display='none';
+    mainHeader.style.display='flex';
 }
 serchBtton.addEventListener("click", serchInput)
 iconsBtton.addEventListener("click",input);
@@ -114,6 +116,28 @@ function myFunction() {
         channerButton.textContent="구독중";
     }
 }
-
 channerButton.addEventListener("click", channerText);
+
+// 자동재생 버튼
+const lastButton = document.querySelector('.last_btn');
+
+function lastButtonOption(){
+    lastButton.classList.toggle('rightMove');
+}
+
+lastButton.addEventListener('click', lastButtonOption);
+
+
+//햄버거 버튼
+const hambugButton = document.querySelector('.icons_bt2');
+const wrapperMenu = document.querySelector('.wrapper');
+const wrapperClose = document.querySelector('.wrapper_close');
+
+function hambugButtonOption(){
+    wrapperMenu.classList.toggle('wrapperMenu');
+}
+hambugButton.addEventListener('click', hambugButtonOption);
+wrapperClose.addEventListener('click', hambugButtonOption);
+
+
 
