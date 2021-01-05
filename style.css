@@ -321,11 +321,15 @@ header .icons .icons_bt2 {
   border-bottom: 1px solid var(--iframe-dark-gray-color);
 }
 
+input:focus {
+  outline: none;
+}
+
 /*자동재생 버튼*/
 .last .last_btn.rightMove{
   text-align : right; 
+  background-color: rgba(0, 0, 255, 0.541);
 }
-
 
 .wrapper{
   position: absolute;
@@ -345,6 +349,9 @@ header .icons .icons_bt2 {
 }
 
 .wrapper button {
+  display: flex;
+  align-items: left;
+  width: 100%;
   font-size: var(--iframe-font-size-title);
 }
 
